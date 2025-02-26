@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .timeline {
+    position: relative;
+    padding-left: 50px; /* Space for the timeline */
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px; /* Adjust to align with markers */
+    width: 10px;
+    height: 100%; /* Full height of timeline */
+    background-color: black;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.marker {
+    width: 15px;
+    height: 15px;
+    background-color: #AF8E58;
+    border-radius: 50%;
+    position: relative;
+    left: 12px; /* Center it on the timeline */
+}
+
+.content {
+    margin-left: 20px;
+}
+
+.content h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #AF8E58;
+}
+
+.content p {
+    margin: 5px 0 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="event">
+            <div class="marker"></div>
+            <div class="content">
+                <h3>1959</h3>
+                <p>First Grammy Awards ceremony.</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <div class="marker"></div>
+            <div class="content">
+                <h3>1962</h3>
+                <p>First televised Grammys.</p>
+            </div>
+        </div>
+    
+        <div class="event">
+            <div class="marker"></div>
+            <div class="content">
+                <h3>1984</h3>
+                <p>Best Music Video category introduced.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+</table>
+</body>
+</html>
+<table>
+    
