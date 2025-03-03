@@ -282,6 +282,10 @@ span.rowheader{
     z-index: 1;
 }
 
+table li{
+    margin: 10px
+}
+
 .winner{
     display: grid;
     grid-template-areas: "image title"
@@ -411,7 +415,7 @@ img.linkedin{
         height: auto;
         margin: 0; /* Remove side margin */
     }
-    
+
     .timeline-container{
     display:flex;
     width: 100wv;
