@@ -406,7 +406,7 @@ img.linkedin{
 }
 
 /* Phones */
-@media (max-width: 550px) {
+@media (max-width: 680px) {
     .container {
         grid-template-areas: 
             'header'
