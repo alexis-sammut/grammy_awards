@@ -97,7 +97,6 @@ nav a:hover {
 
 .intro{
     grid-area: intro;
-
     width: 100vw;
     max-width: 100%;
 }
@@ -231,11 +230,23 @@ figure{
 
 }
 
+.rotate-message {
+    display: none;
+    text-align: center;
+    background-color: #B69858;
+    color: #111111;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    position: fixed;
+    bottom: 10px;
+}
+
 table{
     margin: 0;
     border-spacing: 0;
     border: #B69858 3px solid;
-}
+    }
 
 caption{
 text-align: left;
@@ -395,7 +406,7 @@ img.linkedin{
 }
 
 /* Phones */
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .container {
         grid-template-areas: 
             'header'
@@ -405,12 +416,14 @@ img.linkedin{
             'sidebar'
             'footer';
         margin: 0 auto;
-        /* padding:0 10px; */
         max-width: 100vw;
     }
 
      nav li{
         width: max-content;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.15em;
      }
 
     .container main, .container aside{
@@ -472,6 +485,10 @@ img.linkedin{
         padding-left: 10px;
     }
 
+    .rotate-message{
+        display: block;
+    }
+
     .smaller-screen{
         overflow-x: auto;
         width: 100%;
@@ -484,14 +501,32 @@ img.linkedin{
     }
 }
 
+@media (max-width: 480px) and (orientation: landscape) {
+    .rotate-message {
+        display: none;
+    }
+}
+
 /* Tablets */
 @media (max-width: 1280px) {
     .photoevent{
         display: block;
         }
+
+     table {
+        width: 90%; 
+        max-width: 700px;      
+        margin: 0 auto;
+        }
+
+     .winner{
+        grid-template-areas: "image"
+                            "title"
+                            "links";
+        }
 }
 
-/* Large Desktops? */
+/* Large Desktops*/
 @media (min-width: 1441px){
 
 }
