@@ -66,35 +66,22 @@ nav li{
     position: relative
 }
 
-.submenu-container {
-    position: absolute;
+.submenu {
     visibility: hidden;
-    opacity: 0;
+    display: block;
+    position: absolute;
     background-color: #B69858;
     transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
-    padding: 10px;
 }
 
-nav li a:focus + .submenu-container, 
-nav li:hover .submenu-container {
+nav li:focus-within .submenu, li:hover .submenu {
     visibility: visible;
-    opacity: 1;
 }
 
-.submenu-container:focus-within {
-    visibility: visible;
-    opacity: 1;
+.submenu li{
+    margin-top: 10px;
+    margin-bottom: 10px
 }
-
-.submenu-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 
 a{
     color:white;
