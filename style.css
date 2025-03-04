@@ -75,8 +75,8 @@ nav li{
     padding: 10px;
 }
 
-nav li:hover .submenu-container,
-nav li:focus-within .submenu-container {
+nav li a:focus + .submenu-container, 
+nav li:hover .submenu-container {
     visibility: visible;
     opacity: 1;
 }
