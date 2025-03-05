@@ -469,7 +469,7 @@ img.linkedin{
 
     .timeline-container{
     display:flex;
-    width: 100wv;
+    width: 100vw;
     }
 
     .timeline{
@@ -479,10 +479,6 @@ img.linkedin{
 
     .events-header {
         top: 39px;
-    }
-
-    .events, .photoevent{
-    width: 10wv;
     }
 
     .photoevent{
