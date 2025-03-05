@@ -52,6 +52,10 @@ nav{
     z-index: 100;
 } 
 
+nav a, nav{
+    color: #222222;
+}
+
 nav ul{
 display: flex;
 justify-content: center;
@@ -92,7 +96,7 @@ a{
 }
 
 nav a:hover {
-    color:#111111;
+    color:#565656;
 }
 
 .intro{
@@ -377,11 +381,14 @@ footer{
     align-items: center; 
     justify-content: center;
     padding-bottom: 2.5px;
-    
     }
 
+.contact a{
+    color: #222222;
+}
+
 .contact a:hover{
-    color: #333333;
+    color: #565656;
 }
 
 .feedback{
