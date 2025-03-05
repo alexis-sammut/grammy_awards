@@ -54,11 +54,12 @@ nav{
 nav ul{
 display: flex;
 justify-content: center;
+text-align: center;
+align-items: center;
 gap: 70px;
 list-style-type: none;
 background-color: #D4A857;
 font-size: 1.1em;
-text-align: centerg;
 padding: 8px;
 margin: 0;
 }
@@ -248,7 +249,7 @@ table{
     border-spacing: 0;
     border: #D4A857 3px solid;
 }
-x
+
 caption{
 text-align: left;
 font-size: 1.2em;
