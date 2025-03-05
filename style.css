@@ -33,7 +33,7 @@ header img {
 
 header a{
     text-decoration: none;
-    color: #B69858;
+    color: #D4A857;
     margin: 5px 20px;
 }
 
@@ -56,7 +56,7 @@ display: flex;
 justify-content: center;
 gap: 70px;
 list-style-type: none;
-background-color: #B69858;
+background-color: #D4A857;
 font-size: 1.1em;
 padding: 8px;
 margin: 0;
@@ -70,7 +70,7 @@ nav li{
     visibility: hidden;
     display: block;
     position: absolute;
-    background-color: #B69858;
+    background-color: #D4A857;
     transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 
@@ -112,7 +112,7 @@ nav a:hover {
     grid-area: sidebar;
     width: 20vw;
     align-self: start;
-    border-left: #B69858 solid 3px;
+    border-left: #D4A857 solid 3px;
     margin: 20px;
     padding-left: 0px;
 }
@@ -141,7 +141,7 @@ aside li{
 .aside-title{
     font-size: 1.1em;
     font-weight: bold;
-    color: #B69858;
+    color: #D4A857;
 }
  
 
@@ -168,7 +168,7 @@ main{
 .timeline {
 width: 25px;
 min-width: 10px;
-background-color: #B69858;
+background-color: #D4A857;
 height: auto;
 margin-left: 30px;
 }
@@ -183,9 +183,9 @@ margin-left: 30px;
 
 .events h4 {
     display: inline-block;
-    color: #B69858;
+    color: #D4A857;
     padding-bottom: 5px;
-    border-bottom: 3px solid #B69858;
+    border-bottom: 3px solid #D4A857;
     padding-left: 10px;
     margin-top:10px;
     margin-bottom: 5px;
@@ -230,7 +230,7 @@ figure{
 .rotate-message {
     display: none;
     text-align: center;
-    background-color: #B69858;
+    background-color: #D4A857;
     color: #111111;
     padding: 10px;
     font-size: 1em;
@@ -245,13 +245,13 @@ figure{
 table{
     margin: 0;
     border-spacing: 0;
-    border: #B69858 3px solid;
+    border: #D4A857 3px solid;
     }
 
 caption{
 text-align: left;
 font-size: 1.2em;
-color: #B69858;
+color: #D4A857;
 margin-bottom: 20px;
 font-weight: bold;
 }
@@ -267,7 +267,7 @@ td ul{
 th.header{
     position: sticky;
     top: 34px;
-    color: #B69858;
+    color: #D4A857;
     background-color: #111111;
     font-size: 1.2em;
     padding:5px;
@@ -277,7 +277,7 @@ th.header{
 th.subheader{
     position: sticky;
     top: 65px;
-    color: #B69858;
+    color: #D4A857;
     background-color: #111111;
     font-size: 1.1em;
     padding: 5px;
@@ -285,7 +285,7 @@ th.subheader{
 }
 
 td.rowheader{
-    color: #B69858;
+    color: #D4A857;
     font-size: 1.1em;
     font-weight: bold;
     padding-left: 10px;
@@ -351,7 +351,7 @@ footer{
     grid-template-areas: 'contact linkedin'
                         'feedback linkedin'
                         'copyright copyright';
-    border-top: 4px solid #B69858 ;
+    border-top: 4px solid #D4A857 ;
     gap: 15px;
     padding: 30px 20px;
     background-color: #222222;
@@ -364,7 +364,7 @@ footer{
     justify-self: center;
     width: 150px;
     height: 30px;
-    background-color: #B69858;
+    background-color: #D4A857;
     text-align: center;
     border-radius: 20px;
     display: flex; 
@@ -405,8 +405,26 @@ img.linkedin{
     ;
 }
 
-/* Phones */
-@media (max-width: 680px) {
+/* Laptops & Large Tablets*/
+@media (max-width: 1250px) {
+    .photoevent{
+        display: block;
+        }
+
+     table {
+        width: 90%; 
+        margin: 0 auto;
+        }
+
+     .winner{
+        grid-template-areas: "image"
+                            "title"
+                            "links";
+        }
+}
+
+/* Small Tablets */
+@media (max-width: 700px) {
     .container {
         grid-template-areas: 
             'header'
@@ -456,7 +474,7 @@ img.linkedin{
     }
 
     .events-header {
-        top: 60px;
+        top: 39px;
     }
 
     .events, .photoevent{
@@ -494,7 +512,7 @@ img.linkedin{
     }
 
     .rotate-message{
-        display: block;
+        display: block!important;
     }
 
     .smaller-screen{
@@ -509,32 +527,30 @@ img.linkedin{
     }
 }
 
-@media (max-width: 480px) and (orientation: landscape) {
+@media (min-width: 689px), (orientation: landscape) {
     .rotate-message {
         display: none;
     }
 }
 
-/* Tablets */
-@media (max-width: 1280px) {
-    .photoevent{
-        display: block;
-        }
-
-     table {
-        width: 90%; 
-        max-width: 700px;      
-        margin: 0 auto;
-        }
-
-     .winner{
-        grid-template-areas: "image"
-                            "title"
-                            "links";
-        }
+/* Phones*/
+@media (max-width: 552px){
+    .events-header{
+        top: 60px
+    }
 }
 
-/* Large Desktops*/
-@media (min-width: 1441px){
+/* Smaller Phones */
+@media (max-width: 367px) {
+    nav{
+        position: static;
+    }
 
+    nav ul{
+        gap: 10px;
+    }
+
+    .events-header{
+        top:0
+    }
 }
