@@ -58,6 +58,7 @@ gap: 70px;
 list-style-type: none;
 background-color: #D4A857;
 font-size: 1.1em;
+text-align: centerg;
 padding: 8px;
 margin: 0;
 }
@@ -246,8 +247,8 @@ table{
     margin: 0;
     border-spacing: 0;
     border: #D4A857 3px solid;
-    }
-
+}
+x
 caption{
 text-align: left;
 font-size: 1.2em;
@@ -381,6 +382,7 @@ footer{
 .feedback{
     grid-area: feedback;
     justify-self: center;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -390,6 +392,7 @@ footer{
     align-items: center; 
     justify-content: center;
     padding-top: 10px;
+    white-space: nowrap;
 }
 
 img.linkedin{
@@ -512,7 +515,7 @@ img.linkedin{
     }
 
     .rotate-message{
-        display: block!important;
+        display: block;
     }
 
     .smaller-screen{
@@ -537,6 +540,13 @@ img.linkedin{
 @media (max-width: 552px){
     .events-header{
         top: 60px
+    }
+
+     footer{
+        grid-template-areas: 'contact contact'
+                            'feedback feedback'
+                            'linkedin linkedin'
+                            'copyright copyright';
     }
 }
 
