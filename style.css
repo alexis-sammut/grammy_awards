@@ -100,8 +100,10 @@ nav a:hover {
     max-width: 100%;
 }
 
-.intro h4{
+.intro p{
     margin: 20px;
+    font-size: 1.125em;
+    font-weight: bold;
 }
 
 .banner-image {
@@ -179,11 +181,10 @@ margin-left: 30px;
     position: sticky;
     top: 30px;
     background-color: #111111;
-    font-size: 1.1em;
     z-index: 1;
 }
 
-.events h4 {
+.events span {
     display: inline-block;
     color: #D4A857;
     padding-bottom: 5px;
@@ -191,6 +192,8 @@ margin-left: 30px;
     padding-left: 10px;
     margin-top:10px;
     margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .events p{
