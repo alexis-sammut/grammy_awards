@@ -31,14 +31,15 @@ header img {
     top: 5px;
 }
 
-header a{
+header a, .home-header{
     text-decoration: none;
     color: #D4A857;
     margin: 5px 20px;
 }
 
-header h1{
+header{
     margin-top: 10px;
+    color: #D4A857;
 }
 
 nav{
