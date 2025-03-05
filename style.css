@@ -452,7 +452,7 @@ img.linkedin{
         max-width: 100vw;
     }
 
-    header a{
+    header a, .home-header{
         text-align: center;
         }
 
