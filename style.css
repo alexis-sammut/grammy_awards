@@ -399,7 +399,7 @@ legend{
     top: 50%;
     transform: translateY(-50%);
     transition: 0.3s ease-in-out;
-    color: #888888;
+    color: #444444;
 }
 
 .field-container input,
