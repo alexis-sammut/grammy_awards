@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Apply grid display using grid-template-areas */
+        .feedback-form {
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 1fr 3fr;
+        }
+        
+        .feedback-form span {
+            display: contents;
+        }
+
+
+
+        /* Assign grid areas to each label */
+        .feedback-form span:nth-of-type(1) label {
+            grid-area: label1;
+        }
+
+        .feedback-form span:nth-of-type(2) label {
+            grid-area: label2;
+        }
+
+        .feedback-form span:nth-of-type(3) label {
+            grid-area: label3;
+        }
+
+        /* Assign grid areas to the input fields */
+        .feedback-form span:nth-of-type(1) input {
+            grid-area: input1;
+        }
+
+        .feedback-form span:nth-of-type(2) input {
+            grid-area: input2;
+        }
+
+        .feedback-form span:nth-of-type(3) textarea {
+            grid-area: input3;
+        }
+
+        .feedback-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="feedback-form">
+        <span>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </span>
+        <span>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </span>
+        <span>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+        </span>
+        <span>
+            <button type="submit">Submit</button>
+        </span>
+    </form>
+</body>
+</html>

@@ -358,8 +358,9 @@ tr:nth-of-type(even){
 footer{
     grid-area: footer;
     display: grid;
-    grid-template-areas: 'contact linkedin'
-                        'feedback linkedin'
+    grid-template-areas: 'form feedback'
+                        'form contact'
+                        'form linkedin'
                         'copyright copyright';
     border-top: 4px solid #D4A857 ;
     gap: 15px;
@@ -369,31 +370,107 @@ footer{
     margin-top: 40px;
 }
 
-.contact{
-    grid-area: contact;
+form{
+    grid-area: form;
+    margin-left: 20px;
+}
+
+fieldset{
+    border: 3px solid #D4A857;
+    max-width: 90%;
+    min-width: 80%;
+    text-align: center;
+    padding-right: 20px;
+}
+
+legend{
+    color: #D4A857;
+    font-weight: bold;
+}
+
+.field-container{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.field-container label{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    color: #888888;
+}
+
+.field-container input,
+.field-container textarea {
+    width: 100%;
+    max-width: 83%;
+    padding: 20px;
+    border: 2px solid #222222;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+    margin-right: 0;
+}
+
+.field-container input:focus + label,
+.field-container input:not(:placeholder-shown) + label,
+.field-container textarea:focus + label,
+.field-container textarea:not(:placeholder-shown) + label {
+    top: 20%;
+    font-size: 0.7em;
+    font-weight: lighter;
+    margin-left: 10px;
+}
+
+.field-container textarea:focus + label,
+.field-container textarea:not(:placeholder-shown) + label {
+    top: 10%;
+}
+
+.form button{
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #222222;
+    display: block;
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+.contact, .form button{
     justify-self: center;
     width: 150px;
     height: 30px;
     background-color: #D4A857;
-    text-align: center;
-    border-radius: 20px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
+}
+
+.contact{
+    display: flex;
+    grid-area: contact;
     padding-bottom: 2.5px;
+    border-radius: 20px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
     }
 
 .contact a{
     color: #222222;
 }
 
-.contact a:hover{
+.contact a:hover, .form button:hover{
     color: #565656;
 }
 
 .feedback{
     grid-area: feedback;
+    display: flex;
     justify-self: center;
+    align-items: end;
     text-align: center;
     margin-top: 10px;
 }
@@ -401,15 +478,17 @@ footer{
 .linkedin{
     grid-area: linkedin;
     display: flex; 
-    align-items: center; 
+    align-items: start; 
     justify-content: center;
-    padding-top: 10px;
     white-space: nowrap;
 }
 
+.linkedin span{
+    margin-top: 5px;
+}
+
 img.linkedin{
-    margin-bottom: 14px;
-    margin-left: 5px;
+        margin-left: 5px;
 }
 
 .copyright{
@@ -435,6 +514,10 @@ img.linkedin{
         grid-template-areas: "image"
                             "title"
                             "links";
+        }
+
+        .form button{
+            margin-right: 10px;
         }
 }
 
@@ -536,6 +619,18 @@ img.linkedin{
                             "title"
                             "links";
     }
+
+    .form button{
+        margin-right: 0;
+    }
+
+    footer{
+        grid-template-areas: 'form form'
+                              'feedback feedback'
+                             'contact contact'
+                            'linkedin linkedin'
+                            'copyright copyright';
+    }
 }
 
 @media (min-width: 689px), (orientation: landscape) {
@@ -550,13 +645,8 @@ img.linkedin{
         top: 60px
     }
 
-     footer{
-        grid-template-areas: 'contact contact'
-                            'feedback feedback'
-                            'linkedin linkedin'
-                            'copyright copyright';
     }
-}
+
 
 /* Smaller Phones */
 @media (max-width: 367px) {
